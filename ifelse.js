@@ -1,10 +1,14 @@
-var homework = false
-
-if(homework)
+function superhero(name)
 {
-    console.log("Great Job")
+    var first = name.charAt(0)
+    if(first == "s")
+    {
+        console.log("hero")
+    }
+
+    else{
+        console.log("villan")
+    }
 }
 
-else{
-    console.log("Finish your home wrok before playing")
-}
+superhero("dpiderman")
