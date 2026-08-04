@@ -1,6 +1,14 @@
-<p id="one">hello</p>
+<input type="text" id="inputBox" onkeyup="update()">
+<h1 id="result"></h1>
 
 <script>
-    var para = document.getElementById("one")
-    para.textContent = "gowri"
+    var inputBox = document.getElementById("inputBox")
+    var result = document.getElementById("result")
+    
+    function update()
+    {
+        result.textContent = inputBox.value
+    }
+
+
 </script>
