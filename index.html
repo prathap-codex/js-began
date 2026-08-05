@@ -1,14 +1,20 @@
-<input type="text" id="inputBox" onkeyup="update()">
-<h1 id="result"></h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-    var inputBox = document.getElementById("inputBox")
-    var result = document.getElementById("result")
-    
-    function update()
-    {
-        result.textContent = inputBox.value
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
+<body>
+    <h1>Guess the number from 1 to 10</h1>
+    <input type="text" placeholder="Enter any number" id="inputbox">
+    <button id="btn" onclick="checkthenumber()">Check</button>
+    <p id="result">You are right/wrong</p>
+    <p id="guesscount">Avilable guess:3</p>
 
-</script>
+    <script src="script.js"></script>
+</body>
+
+</html>
