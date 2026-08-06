@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<button id="btn">ADD</button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<div id="container">
 
-<body>
-    <h1>Guess the number from 1 to 10</h1>
-    <input type="text" placeholder="Enter any number" id="inputbox">
-    <button id="btn" onclick="checkthenumber()">Check</button>
-    <p id="result">You are right/wrong</p>
-    <p id="guesscount">Avilable guess:3</p>
+</div>
 
-    <script src="script.js"></script>
-</body>
+<script>
+    var btn = document.getElementById("btn")
+    var container = document.getElementById("container")
 
-</html>
+    btn.addEventListener("click",function(){
+        var heading = document.createElement("p")
+    heading.textContent = "azhagi"
+    console.log(heading)
+    container.append(heading)
+    })
+    
+</script>
