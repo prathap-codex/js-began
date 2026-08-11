@@ -1,34 +1,31 @@
-//SELLECTING ELEMENTS
+var input = document.getElementById("input");
+var btn = document.getElementById("btn");
+var result = document.getElementById("result");
+var guessCount = document.getElementById("guessCount")
 
-var inputbox = document.getElementById("inputbox")
-var result = document.getElementById("result")
-var guesscount = document.getElementById("guesscount")
-var numberofguess = 3
-//GENERATE RANDOM NUMBER
+var guesses = 3;
 
-var randomnumber = Math.floor(Math.random()*10)+1
-if(randomnumber>5)
-{
+
+//CREATING RANDOM NUMBER
+var randomnumber = Math.floor(Math.random()*10)+1;
+if(randomnumber>5){
     randomnumber = randomnumber-5
-}
+};
 
-//EVENT HANDLER FUNCTION
-
-function checkthenumber()
-{
-    if(inputbox.value == randomnumber)
-    {
-        alert("your guess is correct ! ")
+//OVER ALL EXECUTION
+function checking(){
+    if(input.value == randomnumber){
+        alert("congralations Your are right")
         result.textContent = "You are right!"
     }
-    else{
-        numberofguess = numberofguess-1
-        if(numberofguess == 0)
-        {
-            alert("Guess limit is reached. num is: "+randomnumber)
-        }
 
-        guesscount.textContent = "Avilable guess:"+numberofguess
+    else{
+        guesses = guesses-1
+        if(guesses == 0){
+            alert("you are lost"+randomnumber)
+        }
+        guessCount.textContent = "Available guess:"+guesses
         result.textContent = "You are wrong!"
+        
     }
 }

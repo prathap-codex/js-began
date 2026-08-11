@@ -1,18 +1,17 @@
-<button id="btn">ADD</button>
-
-<div id="container">
-
-</div>
-
-<script>
-    var btn = document.getElementById("btn")
-    var container = document.getElementById("container")
-
-    btn.addEventListener("click",function(){
-        var heading = document.createElement("p")
-    heading.textContent = "azhagi"
-    console.log(heading)
-    container.append(heading)
-    })
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess the number</title>
+</head>
+<body>
+    <h1>Guess the random number 1 to 5</h1>
+    <input type="text" placeholder="Enter any number" id="input">
+    <button id="btn" onclick="checking()">Check</button>
+    <p id="result">Your are wright/wrong</p>
+    <p id="guessCount">Available guess:3</p>
     
-</script>
+    <script src="script.js"></script>
+</body>
+</html>
