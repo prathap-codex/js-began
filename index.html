@@ -1,9 +1,27 @@
-<div>
+<input type="checkbox" name="check" value="c++">c++
+<input type="checkbox" name="check" value="py">py
+<input type="checkbox" name="check" value="js">js
 
-</div>
+<h2 id="result"></h2>
 
 <script>
-    var heading = document.createElement("h1");
-    heading.textContent="hello"
-    console.log(heading)
+    const check = document.getElementsByName("check");
+    const result = document.getElementById("result");
+    skill = []
+    for (count = 0; count<check.length; count=count+1)
+{
+    check[count].addEventListener("click",function(){
+        if(event.target.checked)
+    {
+        skill.push(event.target.value)
+        result.textContent = skill
+    }
+
+    else{
+        var index = skill.indexOf(event.target.value)
+        skill.splice(index,1)
+        result.textContent = skill
+    }
+    })
+}
 </script>
